@@ -27,7 +27,7 @@ public class PlayerCameraController : NetworkBehaviour
 
         if(IsClient)
         {
-            CameraManager.Instance.EnableStartCameraClientRpc(false);
+            CameraManager.Instance.EnableStartCamera(false);
         }
     }
 

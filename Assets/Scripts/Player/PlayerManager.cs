@@ -85,24 +85,6 @@ public class PlayerManager : NetworkBehaviour
 			clientGameObject.GetComponent<PlayerUi>().ShowHideOverlayMessageClientRpc(true, clientId, clientRpcParams);
 
 		}
-
-		// Porque é que isto não funciona? Envia sempre o valor por default
-		/*ServerRpcParams serverRpcParams = new ServerRpcParams
-		{
-			Receive = new ServerRpcReceiveParams
-			{
-				SenderClientId = clientId
-			}
-		};
-
-		PlayerKilledServerRpc(serverRpcParams);*/
-	}
-
-	public void DestroyPlayer(ulong clientId)
-	{
-		// Disconnect and Destroy the Player
-		// DisconnectPlayer(clientId);
-		// Destroy(player);
 	}
 
 	public void DisconnectServer()
@@ -120,9 +102,9 @@ public class PlayerManager : NetworkBehaviour
 	[ServerRpc(RequireOwnership = false)]
 	public void DisconnectPlayerServerRpc(ulong clientId, ServerRpcParams serverRpcParams = default)
 	{
-        Debug.LogError($"IsServer: {IsServer}");
+        /*Debug.LogError($"IsServer: {IsServer}");
         Debug.LogError($"IsClient: {IsClient}");
-        Debug.LogError($"IsOwner: {IsOwner}");
+        Debug.LogError($"IsOwner: {IsOwner}");*/
 
         if (IsServer)
 		{
