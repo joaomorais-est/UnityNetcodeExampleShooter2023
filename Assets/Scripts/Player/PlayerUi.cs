@@ -48,8 +48,5 @@ public class PlayerUi : NetworkBehaviour
         PlayerManager.Instance.DisconnectPlayerServerRpc(clientId);
 
         NetworkManagerUI.Instance.ResetCameraAndButtons();
-
-        //CameraManager.Instance.EnableStartCameraClientRpc(true);
-        //NetworkManagerUI.Instance.SetInteractableButtons(true);
     }
 }

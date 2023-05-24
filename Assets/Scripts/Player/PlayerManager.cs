@@ -59,7 +59,31 @@ public class PlayerManager : NetworkBehaviour
 		};
 	}
 
-	public void PlayerKilled(GameObject player)
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            if (IsServer)
+			{
+                DisconnectServer();
+                Application.Quit();
+			}
+
+			if(IsClient)
+			{
+                DisconnectPlayerServerRpc(NetworkManager.Singleton.LocalClientId);
+				NetworkManager.Singleton.Shutdown();
+                Application.Quit();
+            }
+
+			else
+			{
+                Application.Quit();
+            }
+        }
+    }
+
+    public void PlayerKilled(GameObject player)
 	{
 		// If is not the Server/Host then we should early return here!
 		if (!IsServer) { return; }

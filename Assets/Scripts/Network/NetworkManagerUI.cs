@@ -64,10 +64,6 @@ public class NetworkManagerUI : NetworkBehaviour
             }
 		});
 		disconnectButton.onClick.AddListener(() => {
-/*			Debug.LogError($"IsServer: {IsServer}");
-			Debug.LogError($"IsClient: {IsClient}");
-			Debug.LogError($"IsOwner: {IsOwner}");*/
-
 			if(IsClient)
 			{
 				PlayerManager.Instance.DisconnectPlayerServerRpc(NetworkManager.Singleton.LocalClientId);
@@ -78,7 +74,6 @@ public class NetworkManagerUI : NetworkBehaviour
 				PlayerManager.Instance.DisconnectServer();
                 ResetCameraAndButtons();
             }
-
         });
 
 	}
