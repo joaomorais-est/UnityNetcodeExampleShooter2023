@@ -48,7 +48,6 @@ public class BulletManager : NetworkBehaviour
 
             bullet.GetComponent<NetworkObject>().Spawn(true);
 
-            // TODO: validar se esta variavel tem ou nao de ser uma NetworkVariable
             numberOfBulletsSpawned++;
 
             // Esperar X segundos e limpar a variavel de controlo do numero de balas

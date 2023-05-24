@@ -126,10 +126,6 @@ public class PlayerManager : NetworkBehaviour
 	[ServerRpc(RequireOwnership = false)]
 	public void DisconnectPlayerServerRpc(ulong clientId, ServerRpcParams serverRpcParams = default)
 	{
-        /*Debug.LogError($"IsServer: {IsServer}");
-        Debug.LogError($"IsClient: {IsClient}");
-        Debug.LogError($"IsOwner: {IsOwner}");*/
-
         if (IsServer)
 		{
 			Debug.LogError("Disconnect and destroy player - Server");

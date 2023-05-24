@@ -54,20 +54,6 @@ public class PlayerMovement : NetworkBehaviour
         Vector3 moveDirection = Vector3.zero;
 		Quaternion rotationMovement = Quaternion.identity;
 
-		/* (Input.GetKey(KeyCode.W)) { moveDirection.z = moveDirectionValue; }
-		if (Input.GetKey(KeyCode.S)) { moveDirection.z = -moveDirectionValue; }
-		if (Input.GetKey(KeyCode.A)) {
-			//moveDirection.x = -moveDirectionValue;
-			rotationMovement.y = -rotationAngle;
-		}
-		if (Input.GetKey(KeyCode.D)) {
-			//moveDirection.x = moveDirectionValue;
-			rotationMovement.y = rotationAngle;
-		}*/
-
-        // Call the movement update Server Remote Procedure Call
-        //UpdateMovementServerRpc(moveDirection, rotationMovement);
-
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         float mouseX = 0;

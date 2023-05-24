@@ -29,7 +29,6 @@ public class BulletControl : NetworkBehaviour
             
             // Inform the server that a player was killed
             PlayerManager.Instance.PlayerKilled(collision.collider.transform.gameObject);
-            //PlayerManager.Instance.PlayerKilledServerRpc();
         }
     }
 }
